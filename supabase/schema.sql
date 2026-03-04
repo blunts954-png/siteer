@@ -33,6 +33,7 @@ create table if not exists public.scans (
     est_loss_pct numeric,
     est_monthly_loss_low numeric,
     est_monthly_loss_high numeric,
+    status text default 'pending',
     metrics jsonb default '{}'::jsonb
 );
 

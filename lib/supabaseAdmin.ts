@@ -21,7 +21,7 @@ export function getSupabaseAdmin() {
         throw new Error("SUPABASE_URL must start with http:// or https://");
     }
 
-    cachedClient = createClient(url, serviceKey, {
+    cachedClient = createClient<Database>(url, serviceKey, {
         auth: { persistSession: false },
     });
 
